@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Express Server",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/index.ts",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "envFile": "${workspaceFolder}/.env",
+      "restart": true,
+      "console": "integratedTerminal"
+    }
+    //"type": "node": Specifies that you are debugging a Node.js application.
+
+    //"request": "launch": Tells VS Code to start the application in debug mode.
+
+    //"name": "Launch Express Server": A descriptive name for your debug configuration.
+
+    //"program": "${workspaceFolder}/src/index.ts": The path to the main file you want to debug. ${workspaceFolder} is a VS Code variable that refers to your project's root directory.
+
+    //"runtimeArgs": ["-r", "ts-node/register"]: This is the most important part for TypeScript. It tells the Node.js runtime to use ts-node to compile and run your .ts files on the fly.
+
+    //"restart": true: This is useful in combination with nodemon to automatically restart the debugger when file changes are detected.
+  ]
+}
